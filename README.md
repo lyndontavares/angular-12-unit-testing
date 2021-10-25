@@ -25,6 +25,51 @@ Há muitos mais, mas esses três já são uma grande vitória em qualquer projet
 * Os testes são uma boa documentação
 * Os testes deixam os desenvolvedores mais confiantes em seu trabalho
 
+### Fail fast
+
+É importante desenvolver pensando em testes, ou fazer os testes pensando em desenvolver...
+
+Programas que apresentam a falha rápido ajudam na hora de validar o teste
+
+### Um bom template na hora de descrever o teste
+
+Estrutura: #`function` should `action` when `condition`
+
+### Testando Throws no Jasmine
+
+Quando for pra testar throw tem que chamar a função com arrow function `expect(() => function()).toThrow()`
+
+### Aplicando contexto nos testes
+
+Se você quiser saber em qual contexto, ou o que fez o teste quebrar pode chamar o helper `withContext` e passar algum valor pra ele.
+
+Exemplo `expect(() => function()).withContext('Falhou com: ' + variavel).toThrow()`
+
+### Testes ajudam na refatoração
+
+* Escreva um teste que falhe;
+* Faça o código funcionar;
+* Refatore pra evitar redundância;
+
+### beforeEach e outros helpers
+
+Se você quer que algo seja instanciado antes de todo teste use `beforeEach`
+
+### Uma pausa para entender melhor o `ngModule`
+
+* Um módulo tem os metadados de um segemento de componentes
+* O módulo informa como compilar aquele segemento e o que pode ser injetado como depedência em runtime*
+* Você pode importar elementos que compõem o módulo e pode exportá-los e torná-los públicos para outro
+
+### TestBed
+
+* Pra você testar um component/serviço etc é ideal criar um test bed e fazer as importações do módulo, afim de não ser necessário ficar criando dependência manualmente
+* Pra criar um testbed de um serviço você tem que colocar ele nos providers do TestBed
+
+### Callback
+
+Você pode usar um parâmetro na criação do teste que será usando como um callback de conlusão `done => done()`
+
 ## Aula 01
 
 * Distribuição Standalone
