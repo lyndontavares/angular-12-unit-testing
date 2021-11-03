@@ -35,5 +35,24 @@ describe('AppComponent', () => {
   });
 
 
+  it('deve retornar Cerveja quado  `serveDrink` for chamado e se `podeBeberAlcool` retorna true', () => {
+    //preparação
+    const fixture = TestBed.createComponent(AppComponent);
+    const component = fixture.componentInstance;
+
+    // returnValue(true) : informa o valor a ser retornado por podeBeberAlcool
+    // (*) returnValue aceita múltipos parâmetros, que serão os valores de retorno por ordem de chamada
+    // ex: returnValues(true, false) da primeira vez, retorna true e numa segunda chamdama, retornará false
+    const fnc = spyOn(component, 'podeBeberAlcool').and.returnValue(true)
+
+    const person: Person = { idade: 14, bebidaFavorita: null }
+    //ação
+    const result = component.serveDrink(person)
+    //assertiva
+    expect(result).toEqual('Cerveja')
+  });
+
+
+
 
 });
