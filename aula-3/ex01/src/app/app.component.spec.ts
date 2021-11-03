@@ -38,12 +38,18 @@ describe('AppComponent', () => {
     //preparação
     const a = 1
     const b = 256
-    //ação
     const c = component.soma(a,b)
-    //assert
     expect(c).toEqual(a+b)
-
   } )
+
+  it('Deve mostrar exceção se algum parâmtro não for número', () => {
+    //preparação
+    const a = 1
+    const b = null
+    expect( ()=> {
+      component.soma(a,b)
+    }).toThrow('Parametros invalidos! Somente numeros sao permitidos')
+  })
 
 
 });
