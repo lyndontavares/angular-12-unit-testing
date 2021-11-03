@@ -9,8 +9,8 @@
       "cwd": "${workspaceFolder}",
       "args": [
         "test",
-        "--testMatch=\"**/+(*.)+(spec|test).+(ts|js)?(x)\"",
-        "--runInBand"
+        "--test-match=\"**/+(*.)+(spec|test).+(ts|js)?(x)\"",
+        "--run-in-band"
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
@@ -24,9 +24,9 @@
       "cwd": "${workspaceFolder}",
       "args": [
         "test",
-        "--testMatch=\"**/+(*.)+(spec|test).+(ts|js)?(x)\"",
-        "--testPathPattern=${fileBasenameNoExtension}",
-        "--runInBand",
+        "--test-match=\"**/+(*.)+(spec|test).+(ts|js)?(x)\"",
+        "--test-path-pattern=${fileBasenameNoExtension}",
+        "--run-in-band",
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
