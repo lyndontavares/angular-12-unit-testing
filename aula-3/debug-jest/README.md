@@ -1,5 +1,6 @@
 # Jest
 https://dev.to/angular/setup-jest-for-angular-with-debugging-in-visual-studio-code-2d96
+https://dev.to/brunoromeiro/angular-com-jest-5enn
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
