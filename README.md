@@ -76,7 +76,7 @@ Você pode usar um parâmetro na criação do teste que será usando como um cal
 * Suítes
 * Testes (Specs)
 * Verificações (Expectations)
-* [Comparações (Matchers)](#matchers)
+* Comparações (Matchers)
 * Falha manual (Fail)
 
 ## Aula 02
