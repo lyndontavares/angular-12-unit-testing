@@ -1,0 +1,62 @@
+@import '../../shared/scss/variables.scss';
+
+.page-layout {
+  margin: 2rem;
+}
+
+.section__title {
+  color: var(--text-color);
+  font-size: var(--section-title-size);
+  margin-bottom: 2rem;
+}
+
+/* Input section */
+.input-section {
+  .section__body {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+/* Add item to cart section */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2.5rem;
+  &.--name {
+    max-width: 200px;
+  }
+  &.--qty {
+    max-width: 60px;
+  }
+}
+.field__title {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: .5rem;
+}
+.field__input {
+  padding: 0.38rem 0.75rem;
+  font-size: 1.2rem;
+  color: var(--input-color);
+}
+
+/* Medium Devices and up */
+@media (min-width: 767.5px) {
+  .inner-page-wrapper {
+    display: flex;
+    justify-content: space-between;
+    .input-section,
+    .list-section {
+      width: calc(50% - 2rem);
+    }
+  }
+}
+
+/* Large Devices */
+@media (min-width: 1600px) {
+  .page-layout {
+    max-width: 1500px;
+    margin: 3rem auto;
+  }
+}

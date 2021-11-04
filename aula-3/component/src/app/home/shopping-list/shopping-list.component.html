@@ -1,0 +1,24 @@
+<ng-container *ngIf="shoppingList.length > 0;else emptyList">
+  <!-- Shopping list -->
+  <ul class="shopping__list">
+    <li class="item" *ngFor="let item of shoppingList;let i = index">
+      <span class="item__name">{{ item.name }}</span>
+      <span class="item__qty">x {{ item.qty }}</span>
+      <button class="item__remove-btn" type="button" role="button" (click)="removeItem(i)">
+        <fa-icon [icon]="faTime"></fa-icon>
+      </button>
+    </li>
+  </ul><!-- End of shopping list -->
+  <!-- Action row -->
+  <div class="action-row">
+    <button class="--print-list" role="button" type="button" (click)="printList()">Print List</button>
+    <button class="--clear-list" role="button" type="button" (click)="clearList()">Clear</button>
+  </div><!-- End of action row -->
+</ng-container>
+<ng-template #emptyList>
+  <span class="hint --line1">Empty shopping list!</span>
+  <span class="hint --line2">
+    <fa-icon class="arrow" [icon]="faArrowLeft"></fa-icon>
+    Start adding new items
+  </span>
+</ng-template>

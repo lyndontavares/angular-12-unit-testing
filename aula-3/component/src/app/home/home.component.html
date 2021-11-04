@@ -1,0 +1,39 @@
+<!-- Page layout -->
+<div class="page-layout">
+  <h1 class="page-title">Shopping Cart</h1>
+  <!-- Inner page wrapper -->
+  <div class="inner-page-wrapper">
+    <!-- Input section -->
+    <section class="input-section">
+      <h2 class="section__title">Add item to cart</h2>
+      <!-- Section body -->
+      <div class="section__body">
+        <!-- Name field -->
+        <div class="field --name">
+          <label for="name" class="field__title">Name</label>
+          <input id="name" type="text" class="field__input" autocomplete="off" [(ngModel)]="newItemName">
+        </div><!-- End of name field -->
+        <!-- Qty field -->
+        <div class="field --qty">
+          <label for="qty" class="field__title">Qty</label>
+          <input id="qty" type="text" class="field__input" autocomplete="off" maxlength="3" [(ngModel)]="newItemQty">
+        </div><!-- End of qty field -->
+        <!-- Add to cart button -->
+        <button class="btn --add-to-cart" type="button" role="button" (click)="addItem()">Add to cart</button>
+      </div><!-- End of section body -->
+    </section><!-- End of input section -->
+    <!-- List section -->
+    <section class="list-section">
+      <h2 class="section__title">Shopping List</h2>
+      <!-- Section body -->
+      <div class="section__body">
+        <app-shopping-list
+          [shoppingList]="cart"
+          (itemRemove)="removeItem($event)"
+          (print)="printList()"
+          (clear)="clearList()">
+        </app-shopping-list>
+      </div><!-- End of section body -->
+    </section><!-- End of list section -->
+  </div><!-- End of inner page wrapper -->
+</div><!-- End of page layout -->

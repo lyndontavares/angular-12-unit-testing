@@ -1,0 +1,62 @@
+@import '../../../shared/scss/variables.scss';
+
+* {
+  --list-width: 400px;
+}
+.shopping__list {
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #707070;
+  max-width: var(--list-width);
+}
+.item {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.item__name, .item__qty {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #707070;
+}
+.item__name {
+  margin-right: 1rem;
+  width: 200px;
+  display: inline-block;
+}
+
+.item__qty {
+  margin-right: 2rem;
+}
+
+.item__remove-btn {
+  background-color: var(--remove-btn);
+  padding: 0.25rem .689rem;
+  outline-color: var(--remove-btn-outline-color);
+}
+
+.hint {
+  color: var(--hint-color);
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.arrow {
+  margin-right: 10px;
+}
+
+/* Action row */
+.action-row {
+  max-width: var(--list-width);
+  display: flex;
+  justify-content: space-between;
+  button {
+    width: calc(50% - 1rem);
+  }
+}
