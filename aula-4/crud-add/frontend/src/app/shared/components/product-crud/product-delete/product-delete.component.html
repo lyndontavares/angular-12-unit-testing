@@ -1,0 +1,30 @@
+<mat-card class="content mat-elevation-z4">
+    <mat-card-title class="title">
+       Excluir Produto
+    </mat-card-title>
+    <mat-card-subtitle class="subtitle">
+        Confirma exclução produto com id {{ product.id }}?
+    </mat-card-subtitle>
+
+    <form>
+        <mat-form-field>
+            <mat-label>Descrição</mat-label>
+            <input type="text" matInput placeholder="Name"
+                [value] = "product.name" name="name" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Preço (R$)</mat-label>
+            <input type="text" matInput placeholder="Price (R$)"
+                [value] = "product.price" name="price" disabled>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="deleteProduct()"
+        color="warn">
+        Excluir
+    </button>
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

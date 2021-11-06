@@ -1,0 +1,24 @@
+.section {
+    padding: 40px;
+}
+
+.section .title-group {
+    padding-left: 20px;
+}
+
+.title-group a, .title-group i {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    color: #000;
+}
+
+.title-group i {
+    padding-right: 7px;
+}
+
+@media (min-width: 768px) {
+    .title-group a, .title-group i {
+        font-size: 1.75rem;
+    }
+}

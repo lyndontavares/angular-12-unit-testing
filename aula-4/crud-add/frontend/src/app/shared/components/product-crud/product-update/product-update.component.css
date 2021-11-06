@@ -1,0 +1,15 @@
+.title {
+    font-size: 2.5em;
+    line-height: 1.5em;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin-top: 15px;
+    margin-right: 15px;
+}

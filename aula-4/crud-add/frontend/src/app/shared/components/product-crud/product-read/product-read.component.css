@@ -1,0 +1,17 @@
+
+table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+}
+
+.edit > i {
+    color: #123f35;
+}
+
+.delete > i {
+    color: #be4f5a;
+}

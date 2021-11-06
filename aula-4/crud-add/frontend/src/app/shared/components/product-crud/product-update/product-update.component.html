@@ -1,0 +1,27 @@
+<mat-card class="content mat-elevation-z4">
+    <mat-card-title class="title">
+        Editar Produto
+    </mat-card-title>
+
+    <form>
+        <mat-form-field>
+            <mat-label>Descrição</mat-label>
+            <input type="text" matInput placeholder="Name"
+                [(ngModel)] = "product.name" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Preço (R$)</mat-label>
+            <input type="text" matInput placeholder="Price (R$)"
+                [(ngModel)] = "product.price" name="price">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="updateProduct()"
+        color="primary">
+        Gravar
+    </button>
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

@@ -1,0 +1,13 @@
+main {
+    min-height: 100%;
+    padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+    main {
+        width: calc(100% - 230px);
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
