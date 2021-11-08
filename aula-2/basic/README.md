@@ -1,5 +1,23 @@
 # Basic
 
+## Tripple A - AAA - 3A - Arrang, Act and Assert pattern/structure
+
+The `AAA (Arrange, Act, Assert) pattern/structure` is a common way of writing unit tests for a method under test. It suggests that you should divide your test method into three sections: `arrange, act and assert`. It also makes the test more clean and readable.
+
+- **Arrang**:
+  - Initialize system under test
+  - The `Arrange` section of a unit test method `initializes objects` and `sets the value` of the data that is passed to the method under test
+  - ```let component = new ComponentToCheck();```
+
+- **Act**:
+  - Calling a method/function which perform some activity
+  - ```component.methodFunction();```
+
+- **Assert**:
+  - The fact to check/test
+  - The `Assert section verifies` that the action of the method under test behaves as expected
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
 
 ## Development server

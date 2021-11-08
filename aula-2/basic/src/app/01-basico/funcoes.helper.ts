@@ -1,5 +1,4 @@
-// funções criadas a partir da extenão copilot
-
+// funções criada a partir da extenão copilot
 export function calculateDaysBetweenDates(begin, end) {
   const beginDate = new Date(begin);
   const endDate = new Date(end);
@@ -19,7 +18,13 @@ export function sumValues(...values) {
 }
 
 export function getCountry() {
-
   return ['India', 'Russia', 'Japan', 'israel', 'France'];
+}
 
+export function greetingsTo(personName: string) {
+  return 'Welcome ' + personName;
+}
+
+export function sayHello() {
+  return 'Hello World!!!';
 }

@@ -12,5 +12,4 @@ describe('02-usando funçoes', () => {
         expect(dias).toBe(1);
     });
 
-
 })
