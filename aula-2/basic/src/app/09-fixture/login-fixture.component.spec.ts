@@ -16,7 +16,7 @@ describe('LoginFixtureComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LoginFixtureComponent); //(3) Criamos uma instância de um acessório de componente FIXTUE por meio do TestBed, isso injeta o  AuthService no construtor do componente.
     component = fixture.componentInstance; //(4) Podemos encontrar o real componente do componentInstance em FIXTURE
-    fixture.detectChanges();
+    fixture.detectChanges(); //(5) Detectamos as mudanças no componente, isso é necessário para que o componente seja renderizado. Data bind para a intância do componente
   });
 
   it('should create', () => {

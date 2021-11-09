@@ -1,5 +1,6 @@
 import { fakeAsync, tick } from "@angular/core/testing";
 
+//https://angular.io/guide/testing-utility-apis
 describe('Testando código assíncrono', () => {
 
 
