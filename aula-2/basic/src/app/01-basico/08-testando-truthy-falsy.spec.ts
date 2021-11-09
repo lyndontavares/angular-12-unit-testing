@@ -1,4 +1,3 @@
-import { execPath } from "process";
 import { Doctor, DoctorOnLine } from "./doctor.model";
 
 describe('DoctorOnLine', () => {
