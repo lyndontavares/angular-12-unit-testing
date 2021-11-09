@@ -1,5 +1,9 @@
-# CRUD in Angular
+# Workshop - Angular Testes com Jasmine e Karma
 
-### Web application using Angular framework and JSON Server for product registration, with the commands of a CRUD: create, read, update and delete
+Aplicação web utilizando framework Angular e JSON Server para registro de produtos, com os comandos de um CRUD: criar, ler, atualizar e deletar
 
-![Application interface with the running JSON Server](/frontend/src/assets/imgs/frontend-crud.gif)
+## Projeto Final
+
+* Crie testes unitários para os componentes deste projeto
+* Configure o Jasmine para teste de cobertura (coverage)
+* Crie pelo menos 1 teste de ponta a ponta com CIPRES
