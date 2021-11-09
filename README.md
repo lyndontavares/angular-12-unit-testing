@@ -113,3 +113,4 @@ Para o melhor aproveitamento, instale as seguintes extensões:
 * Test Explorer UI
 * Jest Test Explorer
 * Angular/Karma Test Explorer
+* Github Copilot
