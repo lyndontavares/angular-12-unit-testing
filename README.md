@@ -103,3 +103,13 @@ Você pode usar um parâmetro na criação do teste que será usando como um cal
 
 * Testando services e requisições HTTP
 * Code Coverage
+
+## Tools
+
+* VS code
+
+Para o melhor aproveitamento, instale as seguintes extensões:
+
+* Test Explorer UI
+* Jest Test Explorer
+* Angular/Karma Test Explorer
