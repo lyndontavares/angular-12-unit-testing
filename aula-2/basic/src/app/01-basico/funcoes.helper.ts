@@ -1,4 +1,3 @@
-// funções criada a partir da extenão copilot
 export function calculateDaysBetweenDates(begin, end) {
   const beginDate = new Date(begin);
   const endDate = new Date(end);
