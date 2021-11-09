@@ -7,6 +7,7 @@ import { FilterPipe } from './06-pipe/filter.pipe';
 import { CounterPropertyBindingComponent } from './05-property-binding/counter-property-binding.component';
 import { LoginFixtureComponent } from './09-fixture/login-fixture.component';
 import { BannerBasicComponent } from './10-component-basic/banner-basic.component';
+import { WelcomeComponent } from './11-component-service-stub/welcome.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { BannerBasicComponent } from './10-component-basic/banner-basic.componen
     CounterPropertyBindingComponent,
     FilterPipe,
     LoginFixtureComponent,
-    BannerBasicComponent
+    BannerBasicComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule
