@@ -28,3 +28,10 @@ export function greetingsTo(personName: string) {
 export function sayHello() {
   return 'Hello World!!!';
 }
+
+export function soma(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw ('Invalid parameters! Only numbers are allowed.')
+  }
+  return a + b;
+}
