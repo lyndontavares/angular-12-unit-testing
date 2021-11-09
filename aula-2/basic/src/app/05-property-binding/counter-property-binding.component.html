@@ -1,1 +1,15 @@
-<p>counter-property-binding works!</p>
+<div class="counter-container">
+
+    <span class="icon-menu-up count-button" [class.highlighted]="myCount == 1" (click)="upCount()">
+        Up Count
+    </span>
+
+    <!-- <span class="totalCountText">Total: {{ totalVotes }}</span> -->
+    Total:
+    <span class="totalCountText">{{ totalCounts }}</span>
+
+    <span class="icon-menu-down count-button" [class.highlighted]="myCount == -1" (click)="downCount()">
+        Down Count
+    </span>
+
+</div>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FilterPipe } from './06-pipe/filter.pipe';
 import { CounterPropertyBindingComponent } from './05-property-binding/counter-property-binding.component';
 import { LoginFixtureComponent } from './09-fixture/login-fixture.component';
+import { BannerBasicComponent } from './10-component-basic/banner-basic.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { LoginFixtureComponent } from './09-fixture/login-fixture.component';
     HelloComponent,
     CounterPropertyBindingComponent,
     FilterPipe,
-    LoginFixtureComponent
+    LoginFixtureComponent,
+    BannerBasicComponent
   ],
   imports: [
     BrowserModule

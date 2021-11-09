@@ -17,7 +17,7 @@ export function sumValues(...values) {
 }
 
 export function getCountry() {
-  return ['India', 'Russia', 'Japan', 'israel', 'France'];
+  return ['India', 'Russia', 'Japan', 'Israel', 'France'];
 }
 
 export function greetingsTo(personName: string) {
