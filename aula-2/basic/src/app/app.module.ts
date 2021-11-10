@@ -9,6 +9,7 @@ import { LoginFixtureComponent } from './09-fixture/login-fixture.component';
 import { BannerBasicComponent } from './10-component-basic/banner-basic.component';
 import { WelcomeComponent } from './11-component-service-stub/welcome.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './12-mocking-with-spies/login.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
     FilterPipe,
     LoginFixtureComponent,
     BannerBasicComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
