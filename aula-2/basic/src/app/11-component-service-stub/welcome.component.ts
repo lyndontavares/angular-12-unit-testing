@@ -3,7 +3,7 @@ import { UserService } from './user.service';
 
 @Component({
   selector: 'app-welcome',
-  template: '<h3 class="welcome"><i>{{welcome}}</i></h3>'
+  template: '<h1 class="title">Welcome</h1> <h3 class="welcome"><i>{{welcome}}</i></h3>'
 })
 export class WelcomeComponent implements OnInit {
 
