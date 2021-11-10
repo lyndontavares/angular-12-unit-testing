@@ -114,6 +114,6 @@ Para o melhor aproveitamento, instale as seguintes extensões:
 * Angular/Karma Test Explorer
 * Github Copilot
 
-## Refer~encias
+## Referências
 
 * https://simpleweblearning.com/angular-component-unit-test/
