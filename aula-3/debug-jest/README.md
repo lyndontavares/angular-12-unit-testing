@@ -1,4 +1,6 @@
 # Jest
+
+https://github.com/thymikee/jest-preset-angular
 https://dev.to/angular/setup-jest-for-angular-with-debugging-in-visual-studio-code-2d96
 https://dev.to/brunoromeiro/angular-com-jest-5enn
 
