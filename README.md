@@ -1,6 +1,5 @@
 # Angular 12 -Unit Testing
-https://simpleweblearning.com/angular-component-unit-test/
-
+4
 ![](assets/jasmine.png)
 
 ## Introdução
@@ -114,3 +113,7 @@ Para o melhor aproveitamento, instale as seguintes extensões:
 * Jest Test Explorer
 * Angular/Karma Test Explorer
 * Github Copilot
+
+## Referências
+
+* https://simpleweblearning.com/angular-component-unit-test/
