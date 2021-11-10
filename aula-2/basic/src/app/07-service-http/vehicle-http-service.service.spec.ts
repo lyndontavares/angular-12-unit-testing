@@ -2,7 +2,7 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { LIST_VEHICLE_URL, VehicleHttpService } from './vehicle-http-service.service';
-import { Manufacturer } from '../07-service/group-vehicle.model';
+import { Manufacturer } from '../06-service/group-vehicle.model';
 
 describe('Service: VehicleHttp', () => {
   let service: VehicleHttpService;

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HelloComponent } from './04-angular-test-bed/hello.component';
-import { WelcomeComponent } from './11-component-service-stub/welcome.component';
+import { HelloComponent } from './03-angular-test-bed/hello.component';
+import { WelcomeComponent } from './10-component-service-stub/welcome.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'welcome' },

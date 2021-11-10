@@ -9,7 +9,7 @@ import { AuthService } from "./auth.service";
 
 */
 
-describe('12-mocking-with-spies: Login', () => {
+describe('mocking-with-spies: Login', () => {
 
     let component: LoginComponent;
     let service: AuthService;
@@ -28,14 +28,14 @@ describe('12-mocking-with-spies: Login', () => {
     });
 
 
-    it('needsLogin returns true when the user has not been authenticated', () => {
+    it('login precisa retorna true quando o usuário foi autenticado', () => {
         spy = spyOn(service, 'isAuthenticated').and.returnValue(false); //(3) Criamos um spy em nosso servicepara que, se a  isAuthenticatedfunção for chamada, ela retorne false
         expect(component.needsLogin()).toBeTruthy();
         expect(service.isAuthenticated).toHaveBeenCalled(); //(4) Podemos até verificar se a isAuthenticatedfunção foi chamada.
 
     });
 
-    it('needsLogin returns false when the user has been authenticated', () => {
+    it('login precisa retorna false quando o usuário não foi autenticado', () => {
         spy = spyOn(service, 'isAuthenticated').and.returnValue(true);
         expect(component.needsLogin()).toBeFalsy();
         expect(service.isAuthenticated).toHaveBeenCalled();

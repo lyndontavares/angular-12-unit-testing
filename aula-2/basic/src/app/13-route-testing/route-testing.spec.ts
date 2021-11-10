@@ -2,8 +2,8 @@ import { Location } from '@angular/common';
 import { fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
-import { HelloComponent } from '../04-angular-test-bed/hello.component';
-import { WelcomeComponent } from '../11-component-service-stub/welcome.component';
+import { HelloComponent } from '../03-angular-test-bed/hello.component';
+import { WelcomeComponent } from '../10-component-service-stub/welcome.component';
 import { routes } from '../app-routing.module';
 import { AppComponent } from '../app.component';
 
