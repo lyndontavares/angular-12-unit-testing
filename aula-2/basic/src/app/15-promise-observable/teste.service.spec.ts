@@ -2,6 +2,7 @@ import { TesteService } from "./teste.service";
 
 /*
     Teste de Jasmine direto sem o suporte de teste do Angular
+    https://angular.io/guide/testing-services
 */
 
 describe('promise-observable', () => {

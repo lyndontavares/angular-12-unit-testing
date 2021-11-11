@@ -116,4 +116,7 @@ Para o melhor aproveitamento, instale as seguintes extensões:
 
 ## Referências
 
+* https://angular.io/guide/testing
 * https://simpleweblearning.com/angular-component-unit-test/
+* https://testing-angular.com/testing-services/#testing-a-service-with-internal-state
+* https://ng-mocks.sudo.eu/extra/mock-observables
