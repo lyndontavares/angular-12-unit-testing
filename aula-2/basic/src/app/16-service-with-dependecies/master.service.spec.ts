@@ -43,4 +43,8 @@ describe('MasterService without Angular testing support', () => {
         expect(valueServiceSpy.getValue.calls.mostRecent().returnValue)
             .toBe(stubValue);
     });
+
+    /*
+        Prefira spies, pois geralmente são a melhor maneira de simular serviços mocks.
+    */
 });
