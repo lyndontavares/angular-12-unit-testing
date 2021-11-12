@@ -6,6 +6,10 @@
 
 Trabalhar com testes de unidade em qualquer projeto que pelo menos tente ser sério é uma obrigação, não importa se você escolhe usar uma abordagem TDD (desenvolvimento orientado a testes) ou não, você terá muitos benefícios usando isto.
 
+### Pirâmide de teste
+
+![](assets/piramede.png)
+
 ### Benefícios do teste de unidade
 
 Vamos primeiro ver o que eu acho que são os principais motivos para usar o teste de unidade em sua solução ...
@@ -30,10 +34,6 @@ Há muitos mais, mas esses três já são uma grande vitória em qualquer projet
 É importante desenvolver pensando em testes, ou fazer os testes pensando em desenvolver...
 
 Programas que apresentam a falha rápido ajudam na hora de validar o teste
-
-### Um bom template na hora de descrever o teste
-
-Estrutura: #`function` should `action` when `condition`
 
 ### Testando Throws no Jasmine
 
@@ -65,10 +65,6 @@ Se você quer que algo seja instanciado antes de todo teste use `beforeEach`
 
 * Pra você testar um component/serviço etc é ideal criar um test bed e fazer as importações do módulo, afim de não ser necessário ficar criando dependência manualmente
 * Pra criar um testbed de um serviço você tem que colocar ele nos providers do TestBed
-
-### Callback
-
-Você pode usar um parâmetro na criação do teste que será usando como um callback de conlusão `done => done()`
 
 ## Aula 01
 
