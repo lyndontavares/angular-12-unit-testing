@@ -103,7 +103,7 @@ Se você quer que algo seja instanciado antes de todo teste use `beforeEach`
 
 * VS code
 
-Para o melhor aproveitamento, instale as seguintes extensões:
+## Extensões
 
 * Test Explorer UI
 * Jest Test Explorer
