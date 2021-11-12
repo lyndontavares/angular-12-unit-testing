@@ -11,6 +11,8 @@ import { WelcomeComponent } from './10-component-service-stub/welcome.component'
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './14-mocking-with-spies/login.component';
 import { InputComponent } from './12-component-input/input.component';
+import { ContactComponent } from './17-form-contact/contact.component';
+import { ButtonComponent } from './18-form-button-click/button.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { InputComponent } from './12-component-input/input.component';
     BannerBasicComponent,
     WelcomeComponent,
     LoginComponent,
-    InputComponent
+    InputComponent,
+    ContactComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+{{title}}
+
+    <form id="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-group">
+
+            <label for="name">Name
+            <input type="text" class="form-control" id="name" formControlName="name" required>
+            </label>
+
+            <label for="email">Email
+            <input type="email" class="form-control" id="email" formControlName="email" required>
+            </label>
+
+            <label for="message">Message
+            <input type="text" class="form-control" id="text" formControlName="text">
+            </label>
+        </div>
+
+        <button  [disabled]="!contactForm.valid"  type="submit" class="button">Save</button>
+
+    </form>
