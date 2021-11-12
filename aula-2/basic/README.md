@@ -4,7 +4,7 @@
 
 The `AAA (Arrange, Act, Assert) pattern/structure` is a common way of writing unit tests for a method under test. It suggests that you should divide your test method into three sections: `arrange, act and assert`. It also makes the test more clean and readable.
 
-![](../assets/phase.jpg)
+![](./../assets/phase.jpg)
 
 - **Arrang**:
   - Initialize system under test
