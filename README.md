@@ -99,6 +99,15 @@ Se você quer que algo seja instanciado antes de todo teste use `beforeEach`
 * Testando services e requisições HTTP
 * Code Coverage
 
+## Terminologia
+
+* `Unit Test`ou UT é o procedimento para verificar o funcionamento de uma parte específica de um software ou parte de um programa.
+* `Jasmine` Popular framework de testes JavaScript.
+* `Karma`É um test runner. Utiliza intância de browser para mostrar resiltados. Permite testar em diversos browser.
+* `Mock` Mock de objeto são simulações (fake) de objetos reais.
+* `Fixture` é um wrapper (container) de uma instância de componente. Com a Fixture temos acesso a instância do objeto bem como seu template
+* `Spy` é útil para verificação de comportamento de nossos componentes que dependem de inputs externos, sem ter que definir essas dependências.
+
 ## Tools
 
 * VS code
@@ -115,4 +124,5 @@ Se você quer que algo seja instanciado antes de todo teste use `beforeEach`
 * https://angular.io/guide/testing
 * https://simpleweblearning.com/angular-component-unit-test/
 * https://testing-angular.com/testing-services/#testing-a-service-with-internal-state
+* https://codecraft.tv/courses/angular/unit-testing/jasmine-and-karma/
 * https://ng-mocks.sudo.eu/extra/mock-observables
