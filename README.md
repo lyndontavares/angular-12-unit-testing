@@ -103,7 +103,10 @@ Se você quer que algo seja instanciado antes de todo teste use `beforeEach`
 
 * `Unit Test`ou UT é o procedimento para verificar o funcionamento de uma parte específica de um software ou parte de um programa.
 * `Jasmine` Popular framework de testes JavaScript.
+* `Jest` é um framework de teste unitário de código aberto em JavaScript criado pelo Facebook a partir do framework Jasmine.
 * `Karma`É um test runner. Utiliza intância de browser para mostrar resiltados. Permite testar em diversos browser.
+* `Protractor`é uma framework de teste ponta a ponta para aplicações Angular. Executa testes em seu aplicativo em navegador real.
+* `Cypress` poderosa de última geração desenvolvida especialmente para engenheiros de controle de qualidade (analistas QA) e desenvolvedores, que podem usá-la para os testes unitários.
 * `Mock` Mock de objeto são simulações (fake) de objetos reais.
 * `Fixture` é um wrapper (container) de uma instância de componente. Com a Fixture temos acesso a instância do objeto bem como seu template
 * `Spy` é útil para verificação de comportamento de nossos componentes que dependem de inputs externos, sem ter que definir essas dependências.
@@ -122,6 +125,8 @@ Se você quer que algo seja instanciado antes de todo teste use `beforeEach`
 ## Referências
 
 * https://angular.io/guide/testing
+* https://jasmine.github.io/
+* https://jestjs.io/pt-BR/docs/getting-started
 * https://simpleweblearning.com/angular-component-unit-test/
 * https://testing-angular.com/testing-services/#testing-a-service-with-internal-state
 * https://codecraft.tv/courses/angular/unit-testing/jasmine-and-karma/
