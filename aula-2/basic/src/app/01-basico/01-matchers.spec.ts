@@ -58,6 +58,11 @@ describe('01-demonstração de matchers com jasmine', () => {
         expect(idade).toBeGreaterThan(19);
     });
 
+    it('deve demonstrar o uso do toBeGreaterThanOrEqual', () => {
+        const idade = 20;
+        expect(idade).toBeGreaterThanOrEqual(19);
+    });
+
     it('deve demonstrar o uso do toBeLessThan', () => {
         const idade = 20;
         expect(idade).toBeLessThan(21);

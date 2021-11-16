@@ -1,9 +1,23 @@
 {
   "products": [
     {
-      "name": "sad",
+      "id": "9fd43452-b17b-4671-8e9a-bd1b63d557e0",
+      "name": "Moto G100",
+      "quantity": 100,
+      "price": "1000"
+    },
+    {
+      "id": "6d70b00d-e98f-46da-aff8-ec9e4f27d3cb",
+      "name": "Galaxy S21",
       "price": "123",
-      "id": 1
+      "quantity": "1000"
+    },
+    {
+      "id":"e6c49d0f-d920-4a70-9d33-629cc6d9a252",
+      "name": "Xiaomi Mi11",
+      "price": "123",
+      "quantity": "100"
     }
+
   ]
 }

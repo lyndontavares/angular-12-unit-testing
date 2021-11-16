@@ -7,7 +7,7 @@ describe('CounterPropertyBindingComponent', () => {
   let component: CounterPropertyBindingComponent;
   let fixture: ComponentFixture<CounterPropertyBindingComponent>;
 
-  beforeEach(async(() => {
+  beforeEach((() => {
     TestBed.configureTestingModule({
       declarations: [CounterPropertyBindingComponent]
     })
