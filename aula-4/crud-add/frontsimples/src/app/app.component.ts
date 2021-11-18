@@ -5,17 +5,9 @@ import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { ProductService } from './product.service';
-import { ProductData } from './models/product-data.model';
+import { ProductData } from './product-data.model';
 import { Subscription } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
-
-export interface UsersData {
-  name: string
-  id: number
-  price?:number
-  quantity?:number
-}
-
 
 @Component({
   selector: 'app-root',
@@ -27,6 +19,7 @@ export class AppComponent implements OnInit, OnDestroy{
   products: MatTableDataSource<ProductData>;
   displayedColumns: string[] = ['id', 'name', 'price', 'quantity', 'total', 'action' ];
   products$: Subscription;
+  totalProduts = 0;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -49,6 +42,7 @@ export class AppComponent implements OnInit, OnDestroy{
       this.products.paginator = this.paginator;
       this.products.sort = this.sort;
       this.productService.showMessage("Produtos carregados!");
+      this.totalProduts = this.calculaTotal(products)
     });
   }
 
@@ -103,6 +97,10 @@ export class AppComponent implements OnInit, OnDestroy{
       this.productService.showMessage(`Produto com id ${id} excluido com sucesso!`);
     });
     this.fetchData();
+  }
+
+  calculaTotal(products: ProductData[] ): number {
+    return products.reduce((total, valor) => total + ( valor.price * valor.quantity), 0);
   }
 
 }

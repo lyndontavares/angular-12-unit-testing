@@ -53,8 +53,8 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef> Action </th>
       <td mat-cell *matCellDef="let element" class="action-link">
-        <a (click)="openDialog('Editar',element)">Edit</a> |
-        <a (click)="openDialog('Excluir',element)">Delete</a>
+        <a (click)="openDialog('Editar',element)">Editar</a> |
+        <a (click)="openDialog('Excluir',element)">Excluir</a>
       </td>
     </ng-container>
 
@@ -63,5 +63,10 @@
   </table>
 
     <mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
+
+    <mat-toolbar color="default">
+      <span class="example-spacer"></span>
+      <span>Valor Total: {{totalProduts | currency:'BRL'}}</span>
+    </mat-toolbar>
 
 </div>

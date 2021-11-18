@@ -1,6 +1,10 @@
 # Frontsimples
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
+Testing Unit com Jasmne e karma
+
+## Desafio
+
+Criar suítes de testes para todos os componentes e serviços desta aplicação.
 
 ## Instalação
 
@@ -22,27 +26,69 @@ ng add @angular/material
 
 ### passo 2
 
-Adicione em AppModule:
+AppModule:
 
 ```javascript
-    imports: [
-      BrowserModule,
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      FormsModule,
-      MatTableModule,
-      MatPaginatorModule,
-      MatDialogModule,
-      MatFormFieldModule,
-      MatInputModule,
-      MatButtonModule,
-      MatToolbarModule,
-      MatIconModule,
-      MatSortModule,
-      MatSnackBarModule,
-      HttpClientModule,
-      MatCardModule,
-    ]
+import { LOCALE_ID, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule} from '@angular/material/dialog';
+import { MatInputModule} from '@angular/material/input';
+import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
+
+// **************************************************
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(ptBr);
+// **************************************************
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    DialogBoxComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSortModule,
+    MatSnackBarModule,
+    HttpClientModule,
+    MatCardModule,
+  ],
+  providers: [
+    // ************************************
+    { provide: LOCALE_ID, useValue: 'pt' },
+    // ************************************
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
 ```
 
 ### passo 3
@@ -106,8 +152,8 @@ Deixe a template app.component.thml conforme abaixo:
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef> Action </th>
       <td mat-cell *matCellDef="let element" class="action-link">
-        <a (click)="openDialog('Editar',element)">Edit</a> |
-        <a (click)="openDialog('Excluir',element)">Delete</a>
+        <a (click)="openDialog('Editar',element)">Editar</a> |
+        <a (click)="openDialog('Excluir',element)">Excluir</a>
       </td>
     </ng-container>
 
@@ -117,7 +163,13 @@ Deixe a template app.component.thml conforme abaixo:
 
     <mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
 
+    <mat-toolbar color="default">
+      <span class="example-spacer"></span>
+      <span>Valor Total: {{totalProduts | currency:'BRL'}}</span>
+    </mat-toolbar>
+
 </div>
+
 
 ```
 
@@ -139,6 +191,9 @@ table {
   padding: 5px;
 }
 
+.action-link {
+  cursor: pointer;
+}
 
 .example-container {
   display: flex;
@@ -150,7 +205,6 @@ table {
   overflow: auto;
   max-height: 500px;
 }
-
 
 ```
 
@@ -167,17 +221,9 @@ import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { ProductService } from './product.service';
-import { ProductData } from './models/product-data.model';
+import { ProductData } from './product-data.model';
 import { Subscription } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
-
-export interface UsersData {
-  name: string
-  id: number
-  price?:number
-  quantity?:number
-}
-
 
 @Component({
   selector: 'app-root',
@@ -189,6 +235,7 @@ export class AppComponent implements OnInit, OnDestroy{
   products: MatTableDataSource<ProductData>;
   displayedColumns: string[] = ['id', 'name', 'price', 'quantity', 'total', 'action' ];
   products$: Subscription;
+  totalProduts = 0;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -211,6 +258,7 @@ export class AppComponent implements OnInit, OnDestroy{
       this.products.paginator = this.paginator;
       this.products.sort = this.sort;
       this.productService.showMessage("Produtos carregados!");
+      this.totalProduts = this.calculaTotal(products)
     });
   }
 
@@ -267,7 +315,12 @@ export class AppComponent implements OnInit, OnDestroy{
     this.fetchData();
   }
 
+  calculaTotal(products: ProductData[] ): number {
+    return products.reduce((total, valor) => total + ( valor.price * valor.quantity), 0);
+  }
+
 }
+
 
 ```
 
@@ -360,6 +413,98 @@ export class DialogBoxComponent {
 }
 
 ```
+
+## Passo 6
+
+```javascript
+
+/* product-data.model.ts */
+export interface ProductData {
+    id?: number,
+    name: string,
+    price?: number
+    quantity?: number
+}
+
+```
+
+```javascript
+
+/* product.service.ts */
+
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable, EMPTY } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { map, catchError } from 'rxjs/operators';
+import { ProductData } from './product-data.model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProductService {
+
+  baseUrl = "http://localhost:3001/products";
+
+  constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
+
+  showMessage(msg: string, isError: boolean = false): void {
+    this.snackBar.open(msg, isError?'Erro ':'Info ', {
+      duration: 3000,
+      //horizontalPosition: "right",
+      verticalPosition: "bottom",
+      panelClass: (isError) ? ['msg-error'] : ['msg-success']
+    })
+  }
+
+  errorHandler(e: any): Observable<any> {
+    this.showMessage('Erro!', true);
+    return EMPTY;
+  }
+
+  read(): Observable<ProductData[]> {
+    return this.http.get<ProductData[]>(this.baseUrl).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  readById(id: string): Observable<ProductData> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<ProductData>(url).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  create(product: ProductData): Observable<ProductData> {
+    return this.http.post<ProductData>(this.baseUrl, product).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  update(product: ProductData): Observable<ProductData> {
+    const url = `${this.baseUrl}/${product.id}`;
+    return this.http.put<ProductData>(url, product).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  delete(id: string): Observable<ProductData> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<ProductData>(url).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+}
+
+
+```
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
 
 ## Development server
 

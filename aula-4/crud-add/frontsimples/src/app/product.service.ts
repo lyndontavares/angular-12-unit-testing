@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, EMPTY } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { map, catchError } from 'rxjs/operators';
-import { ProductData } from './models/product-data.model';
+import { ProductData } from './product-data.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,7 @@ export class ProductService {
       //horizontalPosition: "right",
       verticalPosition: "bottom",
       panelClass: (isError) ? ['msg-error'] : ['msg-success']
-    });
+    })
   }
 
   errorHandler(e: any): Observable<any> {
@@ -32,7 +32,7 @@ export class ProductService {
     return this.http.get<ProductData[]>(this.baseUrl).pipe(
       map((obj) => obj),
       catchError(e => this.errorHandler(e))
-    );;
+    )
   }
 
   readById(id: string): Observable<ProductData> {
@@ -40,14 +40,14 @@ export class ProductService {
     return this.http.get<ProductData>(url).pipe(
       map((obj) => obj),
       catchError(e => this.errorHandler(e))
-    );;
+    )
   }
 
   create(product: ProductData): Observable<ProductData> {
     return this.http.post<ProductData>(this.baseUrl, product).pipe(
       map((obj) => obj),
       catchError(e => this.errorHandler(e))
-    );;
+    )
   }
 
   update(product: ProductData): Observable<ProductData> {
@@ -55,7 +55,7 @@ export class ProductService {
     return this.http.put<ProductData>(url, product).pipe(
       map((obj) => obj),
       catchError(e => this.errorHandler(e))
-    );;
+    )
   }
 
   delete(id: string): Observable<ProductData> {
@@ -63,6 +63,6 @@ export class ProductService {
     return this.http.delete<ProductData>(url).pipe(
       map((obj) => obj),
       catchError(e => this.errorHandler(e))
-    );;
+    )
   }
 }
