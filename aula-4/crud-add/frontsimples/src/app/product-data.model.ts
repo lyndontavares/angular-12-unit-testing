@@ -3,4 +3,5 @@ export interface ProductData {
     name: string,
     price?: number
     quantity?: number
+    action?: string
 }
