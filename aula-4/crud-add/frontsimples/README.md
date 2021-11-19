@@ -334,12 +334,7 @@ ng generate component dialog-box
 //dialog-box.component.ts
 import { Component, Inject, Optional } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-
-export interface UsersData {
-  name: string;
-  id: number;
-}
-
+import { ProductData } from '../product-data.model';
 
 @Component({
   selector: 'app-dialog-box',
@@ -354,10 +349,10 @@ export class DialogBoxComponent {
   constructor(
     public dialogRef: MatDialogRef<DialogBoxComponent>,
     //@Optional() is used to prevent error if no data is passed
-    @Optional() @Inject(MAT_DIALOG_DATA) public data: UsersData) {
-    console.log(data);
+    @Optional() @Inject(MAT_DIALOG_DATA) public data: ProductData) {
     this.local_data = { ...data };
-    this.action = this.local_data.action;
+    this.action = this.data.action;
+    console.log(data);
   }
 
   doAction() {
@@ -374,7 +369,7 @@ export class DialogBoxComponent {
 
 ```html
 <!-- dialog-box.component.html -->
-<h1 mat-dialog-title><strong>{{action}}</strong></h1>
+<h1 mat-dialog-title id="mat-dialog-title"><strong>{{action}}</strong></h1>
 <div mat-dialog-content>
 
   <mat-form-field class="fw" *ngIf="action != 'Delete'; else elseTemplate" >
@@ -424,6 +419,7 @@ export interface ProductData {
     name: string,
     price?: number
     quantity?: number
+    action?: string
 }
 
 ```
