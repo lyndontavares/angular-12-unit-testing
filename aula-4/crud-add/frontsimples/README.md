@@ -102,7 +102,7 @@ Deixe a template app.component.thml conforme abaixo:
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>Angular Testing</span>
+     <span id="title" class="title">Angular Testing</span>
     <span class="example-spacer"></span>
     <button mat-icon-button (click)="fetchData()">
       <mat-icon>refresh</mat-icon>
