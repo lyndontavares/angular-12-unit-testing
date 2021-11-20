@@ -311,8 +311,8 @@ export class AppComponent implements OnInit, OnDestroy{
     const id = `${product.id}`;
     this.productService.delete(id).subscribe(() => {
       this.productService.showMessage(`Produto com id ${id} excluido com sucesso!`);
+      this.fetchData();
     });
-    this.fetchData();
   }
 
   calculaTotal(products: ProductData[] ): number {
