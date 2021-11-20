@@ -395,8 +395,8 @@ export class DialogBoxComponent {
 </div>
 
 <div mat-dialog-actions  align="end">
-  <button mat-button (click)="doAction()">{{action}}</button>
-  <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+  <button id="action-button" mat-button (click)="doAction()">{{action}}</button>
+  <button id="close-button" mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancelar</button>
 </div>
 
 ```
