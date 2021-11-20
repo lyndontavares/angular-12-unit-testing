@@ -124,7 +124,7 @@ Deixe a template app.component.thml conforme abaixo:
 
     <!-- Id Column -->
     <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> ID. </th>
+      <th mat-header-cell *matHeaderCellDef> UUID </th>
       <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
