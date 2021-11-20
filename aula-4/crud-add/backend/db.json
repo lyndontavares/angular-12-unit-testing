@@ -13,11 +13,40 @@
       "quantity": "1000"
     },
     {
-      "id":"e6c49d0f-d920-4a70-9d33-629cc6d9a252",
+      "id": "e6c49d0f-d920-4a70-9d33-629cc6d9a252",
       "name": "Xiaomi Mi11",
       "price": "123",
       "quantity": "100"
+    },
+    {
+      "id": "fc14b370-b8b4-4431-aead-c98b7fd894c1",
+      "name": "IPhone 12",
+      "price": "1000",
+      "quantity": "200"
+    },
+    {
+      "id": "ca99a9dc-b7d1-4a38-8870-1a5a2928473c",
+      "name": "Moto X",
+      "price": "200",
+      "quantity": "200"
+    },
+    {
+      "id": "045c5a6e-1e9b-4ef2-9973-e2890786d784",
+      "name": "Redmi 9A ",
+      "price": "300",
+      "quantity": "300"
+    },
+    {
+      "id": "6bd6e821-3943-4af9-b757-352f49085d81",
+      "name": "LG K62",
+      "price": "5",
+      "quantity": "25"
+    },
+    {
+      "id": "5b0d4f17-7987-4e33-9688-38db291fe82f",
+      "name": "Quantum Mov Pro",
+      "price": "120",
+      "quantity": "15"
     }
-
   ]
 }
