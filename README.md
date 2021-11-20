@@ -101,15 +101,24 @@ Se você quer que algo seja instanciado antes de todo teste use `beforeEach`
 
 ## Terminologia
 
-* `Unit Test`ou UT é o procedimento para verificar o funcionamento de uma parte específica de um software ou parte de um programa.
+* `Cypress` poderosa de última geração desenvolvida especialmente para engenheiros de controle de qualidade (analistas QA) e desenvolvedores, que podem usá-la para os testes unitários.
+* `Dummies` Dummies são objetos nulos, ou seja, literalmente não fazem nada. Geralmente são utilizados para preencher valores em listas de argumentos.
+* `Fakes` Fake Objects (ou Fakers) são implementações reais e funcionais de alguma dependência, mas de alguma forma são incompletas para serem colocadas em produção (por exemplo, um banco de dados na memória).
+* `Fixture` é um wrapper (container) de uma instância de componente. Com a Fixture temos acesso a instância do objeto bem como seu template
 * `Jasmine` Popular framework de testes JavaScript.
 * `Jest` é um framework de teste unitário de código aberto em JavaScript criado pelo Facebook a partir do framework Jasmine.
 * `Karma`É um test runner. Utiliza intância de browser para mostrar resiltados. Permite testar em diversos browser.
+* `Mocks` Mocks são a evolução dos stubs, pois não substituem um único método, mas sim uma classe toda, mas somente implementa o método escolhido.
 * `Protractor`é uma framework de teste ponta a ponta para aplicações Angular. Executa testes em seu aplicativo em navegador real.
-* `Cypress` poderosa de última geração desenvolvida especialmente para engenheiros de controle de qualidade (analistas QA) e desenvolvedores, que podem usá-la para os testes unitários.
-* `Mock` Mock de objeto são simulações (fake) de objetos reais.
-* `Fixture` é um wrapper (container) de uma instância de componente. Com a Fixture temos acesso a instância do objeto bem como seu template
 * `Spy` é útil para verificação de comportamento de nossos componentes que dependem de inputs externos, sem ter que definir essas dependências.
+* `Stubs` Um stub é uma evolução de um spy. Em suma, um stub é um objeto com um comportamento fixo e previsível.
+* `Unit Test`ou UT é o procedimento para verificar o funcionamento de uma parte específica de um software ou parte de um programa.
+
+## Test Doubles
+
+Dublês de teste: Mock, stub, dummy, fake e spy
+
+![](assets/test.svg)
 
 ## Tools
 
