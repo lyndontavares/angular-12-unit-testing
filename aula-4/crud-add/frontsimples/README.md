@@ -14,7 +14,9 @@ Criar suítes de testes para todos os componentes e serviços desta aplicação.
 
 npm install -g @angular/cli
 
-ng new front
+npm i uuid
+
+ng new frontend
 
 ng add @angular/material
 
@@ -23,6 +25,8 @@ ng add @angular/material
 # ? Set up browser animations for Angular Material? Yes
 
 ```
+
+
 
 ### passo 2
 
